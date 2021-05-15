@@ -20,3 +20,15 @@ var populate = (dataInput) => {
 
 //Populate table
 populate(data);
+
+// Select the submit button
+var submit = d3.select("#submit");
+
+submit.on("click", function() {
+    console.log("hello3")
+
+	console.log(dateInput.property("value"));
+	console.log(cityInput.property("value"));
+	console.log(stateInput.property("value"));
+	console.log(countryInput.property("value"));
+	console.log(shapeInput.property("value"));
