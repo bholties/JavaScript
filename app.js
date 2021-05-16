@@ -32,3 +32,20 @@ submit.on("click", function() {
 	console.log(stateInput.property("value"));
 	console.log(countryInput.property("value"));
 	console.log(shapeInput.property("value"));
+
+	var filtered = tableData.filter(et_sighting =>{
+		return (et_sighting.datetime===dateInput.property("value") || !dateInput.property("value") ) && 
+				  (et_sighting.city===cityInput.property("value") || !cityInput.property("value")) &&
+				  (et_sighting.state===stateInput.property("value") || !stateInput.property("value")) &&
+				  (et_sighting.country===countryInput.property("value") || !countryInput.property("value")) &&
+				  (et_sighting.shape===shapeInput.property("value") || !shapeInput.property("value"))
+	   })
+	  
+	   //run the filtered entries through the displayData function to update the table
+	   displayData(filtered);
+	  
+	  
+	  });
+	  
+	  var filterInputs = d3.selectAll('.form-control');
+	  
