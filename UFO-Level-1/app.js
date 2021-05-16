@@ -34,7 +34,7 @@ button.on("click", () => {
 	var filterData = data.filter(data => data.datetime === inputDate && data.city === inputCity);
 	console.log(filterData)
 
-	// Add filtered sighting to table
+	// Add filter to table
 	tbody.html("");
 
 	let response = {
